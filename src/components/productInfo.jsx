@@ -50,33 +50,12 @@ function ProductInfo() {
                             <h1 className="text-3xl md:text-5xl font-semibold text-black">
                                 {data.show?.name}
                             </h1>
-                            <h1 className="text-black">{data.show?.premiered}</h1>
                         </div>
                         <p className="text-black">
                             Rating :{" "}
                             <span>{data.show?.rating?.average}</span>
                         </p>
                         <p className="text-black">{data.show?.summary}</p>
-                        <p className="text-black">
-                            Status : <span className="text-red-500">{data.show?.status}</span>
-                        </p>
-                        <Link to={data.show?.url} className="text-black">
-                            Url: <span className="text-blue-500">{data.show?.url}</span>
-                        </Link>
-
-                        <Link to={data.show?.officialSite} className="text-black">
-                            Official Url:{" "}
-                            <span className="text-blue-500">{data.show?.officialSite}</span>
-                        </Link>
-                        <Link
-                            to={data.show._links.previousepisode?.href}
-                            className="text-black"
-                        >
-                            Previous Episode:{" "}
-                            <span className="text-blue-500">
-                                {data.show._links.previousepisode?.href}
-                            </span>
-                        </Link>
                         <div className="flex gap-6 justify-center sm:justify-normal">
                             <button className="bg-red-600 hover:bg-red-700 max-w-max mt-2 sm:mt-0 px-6 py-1 rounded-md" onClick={() => { navigate('/products') }}>
                                 Back

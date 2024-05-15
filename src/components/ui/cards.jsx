@@ -1,4 +1,4 @@
-import { util } from "../../utils/cn";
+import { util } from "../../utils/util";
 import { Link } from "react-router-dom";
 
 export const Cards = ({ items, className }) => {
